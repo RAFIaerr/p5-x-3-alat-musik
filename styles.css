@@ -21,7 +21,7 @@ body {
 header {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Angklung_%282315119130%29.jpg') no-repeat center center/cover;
     color: white;
-    max-width: 100%;
+    width: 100%;
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -30,20 +30,20 @@ header {
 }
 
 header h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 10px;
     animation: fadeInUp 1.5s ease-out;
 }
 
 header h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     animation: fadeInUp 2s ease-out;
 }
 
 nav {
     background-color: #683e3e;
     padding: 15px 0;
-    max-width: 100%;
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -54,18 +54,19 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 5px 10px;
 }
 
 nav ul li a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
-    padding: 10px 20px;
+    font-size: 1rem;
+    padding: 8px 15px;
     border-radius: 30px;
     transition: all 0.3s ease;
 }
@@ -89,7 +90,7 @@ section.active {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #000000;
     position: relative;
@@ -108,7 +109,7 @@ h2::after {
 p {
     margin-bottom: 20px;
     color: #000000;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .gallery-grid {
@@ -118,9 +119,9 @@ p {
 }
 
 .gallery-grid img {
-    width: 550px;
+    width: 100%;
     border-radius: 10px;
-    height: 600px;
+    height: auto;
     object-fit: cover;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -133,9 +134,10 @@ p {
 
 footer {
     background-color: #683e3e;
-    max-width: 100%;
+    width: 100%;
     color: white;
     text-align: center;
+    padding: 10px 0;
 }
 
 @keyframes fadeInUp {
@@ -160,13 +162,6 @@ footer {
     }
 }
 
-@media (max-width: 767px) {
-  }
-  @media (max-width: 1023px) and (min-width: 768px) {
-  }
-  @media (min-width: 1024px) {
-  }
-
 .logo-container {
     display: flex;
     justify-content: space-between;
@@ -180,8 +175,8 @@ footer {
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -196,4 +191,47 @@ footer {
 
 .logo:hover {
     transform: scale(1.1);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header h3 {
+        font-size: 1.2rem;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header h3 {
+        font-size: 1.3rem;
+    }
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+    header h3 {
+        font-size: 1.8rem;
+    }
 }
