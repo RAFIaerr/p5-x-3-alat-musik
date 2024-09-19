@@ -32,5 +32,5 @@ function openIG(smansa) {
 }
 
 function openInstagram(achievest) {
-    window.open(`https://www.instagram.com/smansakarawang?igsh=ZXJyZmlidjZrdDVv/${achievest}`, '_blank');
+    window.open(`https://www.instagram.com/achievest65?igsh=Zmo3cnIzb2RrM2sx/${achievest}`, '_blank');
 }
